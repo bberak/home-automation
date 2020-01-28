@@ -9,7 +9,7 @@ const router = new Router();
 router.post("/ir/send/:code", ctx => {
 	const code = ctx.params.code;
 
-	exec(`ir-ctl -s ir-codes/panasonic/${code}.txt`),
+	exec(`ir-ctl -s ir-codes/panasonic/${code}.txt`);
 });
 
 app
