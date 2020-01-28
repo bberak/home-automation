@@ -1,3 +1,4 @@
+const { exec } = require('child_process');
 const Static = require("koa-static");
 const Koa = require("koa");
 const Router = require("@koa/router");
@@ -8,7 +9,7 @@ const router = new Router();
 router.post("/ir/send/:code", ctx => {
 	const code = ctx.params.code;
 
-	console.log(code);
+	exec(`ir-ctl -s ir-codes/panasonic/${code}.txt`),
 });
 
 app
