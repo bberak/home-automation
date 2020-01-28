@@ -9,5 +9,5 @@ git clone https://github.com/bberak/home-automation.git
 cd home-automation 
 npm run setup
 npm run build
-npm run server
+npm run serve
 ```
