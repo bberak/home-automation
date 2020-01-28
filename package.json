@@ -6,7 +6,8 @@
   "scripts": {
     "setup": "npm install --prefix ./client && npm install --prefix ./server",
     "build": "npm run build --prefix ./client && rm -rf server/site && cp -r client/build server/site",
-    "serve": "npm run serve --prefix ./server"
+    "serve": "npm run serve --prefix ./server",
+    "shutdown": "sudo shutdown -h now"
   },
   "repository": {
     "type": "git",
