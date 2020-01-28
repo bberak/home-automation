@@ -1,0 +1,21 @@
+{
+  "name": "home-automation",
+  "version": "1.0.0",
+  "description": "Some fun home automation projects",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install --prefix ./client && npm install --prefix ./server",
+    "build": "npm run build --prefix ./client && rm -rf server/build && cp -r client/build server/site",
+    "serve": "npm run serve --prefix ./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bberak/home-automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bberak/home-automation/issues"
+  },
+  "homepage": "https://github.com/bberak/home-automation#readme"
+}
