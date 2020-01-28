@@ -6,10 +6,8 @@ const Router = require("@koa/router");
 const app = new Koa();
 const router = new Router();
 
-router.post("/ir/send/:code", ctx => {
-	const code = ctx.params.code;
-
-	exec(`ir-ctl -s ir-codes/panasonic/${code}.txt`);
+router.post("/ir/:code", ctx => {
+	exec(`ir-ctl -s ir-codes/panasonic/${ctx.params.code}.txt`);
 });
 
 app

@@ -3,10 +3,10 @@ import React from "react";
 export default function Button(props) {
 
   const transmit = () => {
-    fetch(`/ir/send/${props.action}`, { method: 'POST' }).catch(console.log)
+    fetch(`/ir/${props.action}`, { method: 'POST' }).catch(console.log)
   }
 
-  return <button onClick={transmit} style={button}>{props.children}</button>;
+  return <button onTouchStart={transmit} style={button}>{props.children}</button>;
 }
 
 export function Empty(argument) {
@@ -16,10 +16,12 @@ export function Empty(argument) {
 const button = {
   display: "flex",
   flex: 1,
-  fontSize: "2rem",
+  fontSize: 20,
+  fontWeight: "bold",
   alignItems: "center",
   justifyContent: "center",
-  margin: 20,
-  padding: 50,
+  margin: 10,
+  padding: 10,
+  height: 80,
   borderRadius: 20
 };

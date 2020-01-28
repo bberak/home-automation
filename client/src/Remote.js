@@ -18,7 +18,7 @@ export default function Remote() {
 
       <div style={row}>
         <Button action={"left"}>Left</Button>
-        <Button action={"okay"}>OK</Button>
+        <Button action={"ok"}>OK</Button>
         <Button action={"right"}>Right</Button>
       </div>
 
@@ -32,10 +32,10 @@ export default function Remote() {
 }
 
 const remote = {
-  padding: 100
+  //margin: 100
 };
 
 const row = {
   display: "flex",
-  justifyContent: "space-between"
+  //justifyContent: "space-between"
 };
