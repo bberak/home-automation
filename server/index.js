@@ -10,7 +10,7 @@ router.get('/blah', (ctx, next) => {
 });
 
 app
-  .use(Static('public'))
+  .use(Static('build'))
   .use(router.routes())
   .use(router.allowedMethods());
 
