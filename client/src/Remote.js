@@ -4,7 +4,10 @@ import Button, { Empty } from "./Button";
 export default function Remote() {
   return (
     <div style={remoteCSS}>
-      <div style={rowCSS}>
+
+      <h2 style={{ color: "#fff"}}>Panasonic</h2>
+
+      <div style={{...rowCSS, ...gap}}>
         <Button action={"power"} backgroundColor={"#de5762"} color={"#fff"}>
           Power
         </Button>
@@ -58,8 +61,8 @@ export default function Remote() {
 }
 
 const remoteCSS = {
-  paddingTop: 80,
-  paddingBottom: 80
+  paddingTop: 30,
+  paddingBottom: 30
 };
 
 const rowCSS = {

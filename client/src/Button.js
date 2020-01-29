@@ -22,20 +22,6 @@ Button.defaultProps = {
   backgroundColor: "#fafbfb"
 };
 
-export function Empty(argument) {
-  return <div style={buttonCSS} />;
+export function Empty() {
+  return <div className="Button" />;
 }
-
-const buttonCSS = {
-  display: "flex",
-  flex: 1,
-  fontSize: 20,
-  fontWeight: "bold",
-  alignItems: "center",
-  justifyContent: "center",
-  margin: 10,
-  padding: 10,
-  height: 60,
-  borderRadius: 20,
-  touchAction: "manipulation"
-};
