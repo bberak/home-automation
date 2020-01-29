@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "sudo node index.js"
+    "serve": "sudo '$(which node)' index.js"
   },
   "author": "",
   "license": "ISC",
