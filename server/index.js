@@ -7,7 +7,9 @@ const app = new Koa();
 const router = new Router();
 
 router.post("/ir/:code", ctx => {
-	exec(`ir-ctl -s ir-codes/panasonic/${ctx.params.code}.txt`);
+	const code = ctx.params.code;
+	console.log(`Sending: ${code}`);
+	exec(`ir-ctl -s ir-codes/${code}.txt`);
 });
 
 app

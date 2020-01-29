@@ -3,39 +3,70 @@ import Button, { Empty } from "./Button";
 
 export default function Remote() {
   return (
-    <div style={remote}>
-      <div style={row}>
-        <Button action={"power"}>Power</Button>
+    <div style={remoteCSS}>
+      <div style={rowCSS}>
+        <Button action={"power"} backgroundColor={"#de5762"} color={"#fff"}>
+          Power
+        </Button>
         <Empty />
         <Button action={"input"}>Input</Button>
       </div>
 
-      <div style={row}>
+      <div style={{...rowCSS, ...gap}}>
+        <Button action={"internet"}>Net</Button>
+        <Empty />
+        <Button action={"exit"}>Exit</Button>
+      </div>
+
+      <div style={{...rowCSS, ...gap}}>
         <Empty />
         <Button action={"up"}>Up</Button>
         <Empty />
       </div>
 
-      <div style={row}>
+      <div style={rowCSS}>
         <Button action={"left"}>Left</Button>
-        <Button action={"ok"}>OK</Button>
+        <Button action={"ok"}>Ok</Button>
         <Button action={"right"}>Right</Button>
       </div>
 
-      <div style={row}>
+      <div style={rowCSS}>
         <Empty />
         <Button action={"down"}>Down</Button>
         <Empty />
+      </div>
+
+      <div style={{...rowCSS, ...gap}}>
+        <Button action={"mute"}>Mute</Button>
+        <Button action={"subtitles"}>Sub</Button>
+        <Button action={"guide"}>Guide</Button>
+      </div>
+
+      <div style={{...rowCSS, ...gap}}>
+        <Button action={"volume-up"}>Vol +</Button>
+        <Empty />
+        <Button action={"channel-up"}>Ch +</Button>
+      </div>
+
+      <div style={rowCSS}>
+        <Button action={"volume-down"}>Vol -</Button>
+        <Empty />
+        <Button action={"channel-down"}>Ch -</Button>
       </div>
     </div>
   );
 }
 
-const remote = {
-  //margin: 100
+const remoteCSS = {
+  paddingTop: 80,
+  paddingBottom: 80
 };
 
-const row = {
+const rowCSS = {
   display: "flex",
-  //justifyContent: "space-between"
+  flexDirection: "row"
 };
+
+const gap = {
+  marginTop: 30
+}

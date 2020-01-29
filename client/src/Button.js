@@ -1,19 +1,32 @@
-import React from "react";
+import React from 'react';
+import './Button.css';
 
-export default function Button(props) {
-
+export default function Button({ action, color, backgroundColor, children }) {
   const transmit = () => {
-    fetch(`/ir/${props.action}`, { method: 'POST' }).catch(console.log)
-  }
+    fetch(`/ir/${action}`, { method: "POST" }).catch(console.log);
+  };
 
-  return <button onTouchStart={transmit} style={button}>{props.children}</button>;
+  return (
+    <div
+      onTouchStart={transmit}
+      style={{ color, backgroundColor }}
+      className="Button"
+    >
+      {children}
+    </div>
+  );
 }
+
+Button.defaultProps = {
+  color: "#000",
+  backgroundColor: "#fafbfb"
+};
 
 export function Empty(argument) {
-  return <div style={button} />;
+  return <div style={buttonCSS} />;
 }
 
-const button = {
+const buttonCSS = {
   display: "flex",
   flex: 1,
   fontSize: 20,
@@ -22,6 +35,7 @@ const button = {
   justifyContent: "center",
   margin: 10,
   padding: 10,
-  height: 80,
-  borderRadius: 20
+  height: 60,
+  borderRadius: 20,
+  touchAction: "manipulation"
 };
