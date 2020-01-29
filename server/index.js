@@ -18,3 +18,7 @@ app
 	.use(router.allowedMethods());
 
 app.listen(80);
+
+console.log();
+console.log("Ready..")
+console.log();
