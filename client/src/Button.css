@@ -10,7 +10,7 @@
   height: 60px;
   border-radius: 20px;
   user-select: none;
-  touch-action: none;
+  touch-action: manipulation;
 }
 
 .Button:active {
