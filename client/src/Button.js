@@ -22,6 +22,6 @@ Button.defaultProps = {
   backgroundColor: "#fafbfb"
 };
 
-export function Empty() {
-  return <div className="Button" />;
+export function Placeholder() {
+  return <div className="Placeholder" />;
 }

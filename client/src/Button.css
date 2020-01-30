@@ -1,4 +1,4 @@
-.Button {
+.Button, .Placeholder {
   display: flex;
   flex: 1;
   font-size: 20px;
@@ -9,7 +9,8 @@
   padding: 10px;
   height: 60px;
   border-radius: 20px;
-  touch-action: manipulation;
+  user-select: none;
+  touch-action: none;
 }
 
 .Button:active {

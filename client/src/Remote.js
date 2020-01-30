@@ -1,30 +1,30 @@
 import React from "react";
-import Button, { Empty } from "./Button";
+import Button, { Placeholder } from "./Button";
 
 export default function Remote() {
   return (
     <div style={remoteCSS}>
 
-      <h2 style={{ color: "#fff"}}>Panasonic</h2>
+      <h2 style={{ color: "#fff" }}>Panasonic</h2>
 
       <div style={{...rowCSS, ...gap}}>
         <Button action={"power"} backgroundColor={"#de5762"} color={"#fff"}>
           Power
         </Button>
-        <Empty />
+        <Placeholder />
         <Button action={"input"}>Input</Button>
       </div>
 
       <div style={{...rowCSS, ...gap}}>
         <Button action={"internet"}>Net</Button>
-        <Empty />
+        <Placeholder />
         <Button action={"exit"}>Exit</Button>
       </div>
 
       <div style={{...rowCSS, ...gap}}>
-        <Empty />
+        <Placeholder />
         <Button action={"up"}>Up</Button>
-        <Empty />
+        <Placeholder />
       </div>
 
       <div style={rowCSS}>
@@ -34,9 +34,9 @@ export default function Remote() {
       </div>
 
       <div style={rowCSS}>
-        <Empty />
+        <Placeholder />
         <Button action={"down"}>Down</Button>
-        <Empty />
+        <Placeholder />
       </div>
 
       <div style={{...rowCSS, ...gap}}>
@@ -47,13 +47,13 @@ export default function Remote() {
 
       <div style={{...rowCSS, ...gap}}>
         <Button action={"volume-up"}>Vol +</Button>
-        <Empty />
+        <Placeholder />
         <Button action={"channel-up"}>Ch +</Button>
       </div>
 
       <div style={rowCSS}>
         <Button action={"volume-down"}>Vol -</Button>
-        <Empty />
+        <Placeholder />
         <Button action={"channel-down"}>Ch -</Button>
       </div>
     </div>
